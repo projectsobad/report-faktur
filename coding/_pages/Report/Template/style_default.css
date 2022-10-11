@@ -1,0 +1,298 @@
+<style>
+    body {
+        font-family: 'poppins';
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    h1 {
+        font-size: 41px;
+        font-family: 'poppins';
+    }
+
+    h2 {
+        font-size: 29px;
+        font-family: 'poppins';
+    }
+
+    h3 {
+        font-size: 21px;
+        font-family: 'poppins';
+    }
+
+    h4 {
+        font-size: 19px;
+        font-family: 'poppins';
+    }
+
+    h5 {
+        font-size: 17px;
+        font-family: 'poppins';
+        font-weight: 400;
+    }
+
+    h6 {
+        font-size: 14px;
+        font-family: 'poppins';
+    }
+
+    p {
+        font-size: 12px;
+        font-family: 'poppins';
+    }
+
+    .box {
+        background-color: #E9068B;
+        color: white;
+        padding: 1px;
+    }
+
+    .box-header {
+        width: 200px;
+        height: 150px;
+        border-radius: 25%;
+        background-color: #E9068B;
+        color: #E9068B;
+        text-align: center;
+    }
+
+    .address-layout {
+        width: 100%;
+    }
+
+    .table-retail {
+        margin-top: 25px;
+    }
+
+    .address-layout-left {
+        padding-right: 20px;
+    }
+
+    .address-layout-right {
+        margin-top: 40px;
+    }
+
+    .table-layout {
+        margin-top: 25px;
+    }
+
+    .bg-magenta {
+        background-color: #E9068B;
+        font-family: Calibri;
+        color: #fff;
+    }
+
+    .bg-dark {
+        background-color: #2B2C51;
+        font-family: Calibri;
+        color: #fff;
+    }
+
+    table.table-layout thead tr td {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .title h5 {
+        font-family: arial, sans-serif !important;
+    }
+
+    .qrcode {
+        font-family: 'poppins-m' !important;
+        font-size: 5px;
+        padding-right: 2px;
+        padding-left: 2px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px;
+    }
+
+    .line-top {
+        border-top: 0.5px solid black;
+    }
+
+    .line-bottom {
+        border-bottom: 0.5px solid black;
+    }
+
+    .line-right {
+        border-right: 0.5px solid black;
+    }
+
+    .line-left {
+        border-left: 0.5px solid black;
+    }
+
+    .pt-xs {
+        padding-top: .25em;
+    }
+
+    .pb-xs {
+        padding-bottom: .25em;
+    }
+
+    .pr-xs {
+        padding-right: .25em;
+    }
+
+    .pl-xs {
+        padding-left: .25em;
+    }
+
+    .pt-sm {
+        padding-top: .75em;
+    }
+
+    .pb-sm {
+        padding-bottom: .75em;
+    }
+
+    .pr-sm {
+        padding-right: .75em;
+    }
+
+    .pl-sm {
+        padding-left: .75em;
+    }
+
+    .pt-md {
+        padding-top: 1.25em;
+    }
+
+    .pb-md {
+        padding-bottom: 1.25em;
+    }
+
+    .pr-md {
+        padding-right: 1.25em;
+    }
+
+    .pl-md {
+        padding-left: 1.25em;
+    }
+
+    .pt-lg {
+        padding-top: 1.5em;
+    }
+
+    .pb-lg {
+        padding-bottom: 1.5em;
+    }
+
+    .pr-lg {
+        padding-right: 1.5em;
+    }
+
+    .pl-lg {
+        padding-left: 1.5em;
+    }
+
+    .pt-xl {
+        padding-top: 2em;
+    }
+
+    .pb-xl {
+        padding-bottom: 2em;
+    }
+
+    .pr-xl {
+        padding-right: 2em;
+    }
+
+    .pl-xl {
+        padding-left: 2em;
+    }
+
+    .mt-xs {
+        margin-top: .25em;
+    }
+
+    .mb-xs {
+        margin-bottom: .25em;
+    }
+
+    .mr-xs {
+        margin-right: .25em;
+    }
+
+    .ml-xs {
+        margin-left: .25em;
+    }
+
+    .mt-sm {
+        margin-top: .75em;
+    }
+
+    .mb-sm {
+        margin-bottom: .75em;
+    }
+
+    .mr-sm {
+        margin-right: .75em;
+    }
+
+    .ml-sm {
+        margin-left: .75em;
+    }
+
+    .mt-md {
+        margin-top: 1.25em;
+    }
+
+    .mb-md {
+        margin-bottom: 1.25em;
+    }
+
+    .mr-md {
+        margin-right: 1.25em;
+    }
+
+    .ml-md {
+        margin-left: 1.25em;
+    }
+
+    .mt-lg {
+        margin-top: 2em;
+    }
+
+    .mt-xl {
+        margin-top: 3em;
+    }
+
+
+    .mb-lg {
+        margin-bottom: 2em;
+    }
+
+    .mr-lg {
+        margin-right: 2em;
+    }
+
+    .ml-lg {
+        margin-left: 2em;
+    }
+
+    .table-border {
+        border: 1px solid black;
+    }
+
+    .text-align-center {
+        text-align: center;
+    }
+
+    .font-weight-normal {
+        font-weight: normal;
+    }
+
+    .font-weight-bold {
+        font-weight: bold;
+    }
+
+    .line-height-sm {
+        line-height: 1.25;
+    }
+
+    .line-height-md {
+        line-height: 1.5;
+    }
+</style>

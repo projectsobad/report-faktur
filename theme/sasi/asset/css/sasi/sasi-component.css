@@ -1,0 +1,328 @@
+/* Modal */
+.modal-full-custom.modal-dialog {
+    width: 60% !important;
+}
+
+.modal-dialog .modal-content {
+    border-radius: 25px !important;
+}
+
+.modal-dialog .modal-header {
+    padding: 30px 40px 10px 40px;
+    border: unset !important;
+}
+
+.modal-dialog .modal-body {
+    padding: 10px 40px 10px 40px;
+}
+
+.modal-dialog .modal-footer {
+    padding: 10px 40px 30px 40px;
+    border: unset !important;
+}
+
+.modal-header>h4.modal-title {
+    font-size: 20px !important;
+    text-transform: capitalize;
+}
+
+.modal-dialog .modal-footer {
+    text-align: left !important;
+}
+
+label.control-label {
+    padding-bottom: 10px;
+    text-align: left !important;
+}
+
+.form-group .form-control.input-circle {
+    border-radius: 10px !important;
+}
+
+.modal-footer>button.btn.blue,
+.modal-footer>button.btn.red-border {
+    padding: 7px 30px;
+    border-radius: 10px !important;
+}
+
+.modal-footer>button.btn.red-border {
+    background-color: #fff;
+    color: #D51414;
+    border: 1px solid #D51414;
+}
+
+.modal .modal-backdrop.fade.in {
+    position: fixed;
+}
+
+#history_portlet .table-responsive {
+    overflow-x: unset;
+    margin-top: 15px;
+}
+
+/* End Modal */
+
+.btn.btn-xs {
+    padding: 3px 10px;
+    border-radius: 5px !important;
+}
+
+.footer-logo>img {
+    width: 170px;
+}
+
+.topnav a.disable-target:hover {
+    border-bottom: unset !important;
+}
+
+.navbar-default .navbar-nav>li>a.disable-target {
+    color: #818893 !important;
+}
+
+.navbar-default .navbar-nav>li>a.disable-target:hover {
+    cursor: not-allowed !important;
+}
+
+.portlet.box.blue-madison {
+    padding: 2em 3em !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    border: unset !important;
+}
+
+.portlet>.portlet-body.blue-madison,
+.portlet.blue-madison,
+.portlet.box.blue-madison>.portlet-title {
+    background-color: #fff !important;
+}
+
+a,
+.portlet.box.blue-madison>.portlet-title>.caption {
+    color: #333;
+}
+
+button.btn.dropdown-toggle.selectpicker {
+    height: 45px;
+    border-radius: 10px !important;
+}
+
+.sasi_childmenu .box-sidemenu {
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    top: 0;
+}
+
+.menu-disabled i.icon-menu {
+    color: #F2F3F5;
+}
+
+a.sasi_childmenu.disabled {
+    cursor: not-allowed;
+}
+
+.btn-group.form-control.bs-select {
+    background-color: unset;
+}
+
+/* loading spinner */
+.nav-tabs>li.active>a,
+span.badge.badge-success,
+.loading-message>.block-spinner-bar>div,
+#dash_pagination li.disabled>a,
+.ver-inline-menu li.active a {
+    background: #8023B4;
+    color: #FFF;
+}
+
+/* Button */
+
+.table-hover>tbody>tr:hover {
+    background: unset;
+}
+
+button.btn.default.dropdown-toggle {
+    background: #F5F8FA;
+    border-radius: 5px !important;
+    margin-bottom: 5px;
+}
+
+.btn-default {
+    color: #FFF !important;
+    border-color: #009EF7 !important;
+    background-color: #009EF7 !important;
+}
+
+.action .btn-default>i {
+    color: #8023B4 !important;
+}
+
+td>.btn.blue {
+    color: #009EF7 !important;
+    background-color: #F5F8FA !important;
+}
+
+td>.btn.green {
+    color: #15BA6B !important;
+    background-color: #F5F8FA !important;
+}
+
+td>.btn.orange {
+    color: #FF8459 !important;
+    background-color: #F5F8FA !important;
+}
+
+td>.btn.red {
+    color: #D51442 !important;
+    background-color: #F5F8FA !important;
+}
+
+td>.btn.yellow {
+    color: #FF8459 !important;
+    background-color: #F5F8FA !important;
+}
+
+/* Tabs Nav */
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    color: #fff;
+    cursor: default;
+    background-color: #8023b4 !important;
+    border: 0px solid #ddd !important;
+    border-bottom-color: unset !important;
+}
+
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 0px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs {
+    display: inline-block;
+    background: #fff;
+    border-radius: 25px !important;
+    border-bottom: unset;
+    padding: 3px;
+}
+
+.nav-tabs>li {
+    margin-bottom: 0px;
+}
+
+.nav-tabs>li.active>a {
+    color: #fff;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li>a:hover {
+    border-radius: 20px !important;
+}
+
+li.active span.badge.badge-success {
+    background: #fff;
+    color: #8023B4;
+    font-weight: 700;
+}
+
+
+
+.nav-tabs>li.active>a:focus {
+    background-color: #ddd;
+}
+
+.nav-tabs>li>a {
+    margin-right: unset;
+}
+
+/* Search Table */
+
+.row.search-form-default {
+    margin-bottom: 20px;
+}
+
+.row.search-form-default>div {
+    padding: 0px;
+}
+
+.search-form-default {
+    background: unset;
+    padding: unset;
+}
+
+form#sobad-search div.input-cont>input {
+    border-top: 1px solid #dfdfdf;
+    border-radius: 10px 0px 0px 10px !important;
+    border-left: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+button.btn.sasi-btn-search.dropdown-toggle {
+    border-radius: 0px 10px 10px 0px !important;
+}
+
+#dash_pagination li.disabled>a,
+#dash_pagination li.disabled>a:hover {
+    border-radius: 9px !important;
+}
+
+div#reduce_portlet .table-responsive {
+    display: contents;
+}
+
+/* inline menu */
+/* ul.ver-inline-menu.tabbable {
+    background: #F5F5F5;
+    padding: 3px;
+}
+
+.ver-inline-menu li a {
+    border-left: 1px solid #F5F5F5;
+}
+
+ul.ver-inline-menu.tabbable,
+.ver-inline-menu li.active a,
+.ver-inline-menu li:hover a {
+    border-radius: 7px !important;
+}
+
+.ver-inline-menu li.active a {
+    border-left: 1px solid #8023B4;
+}
+
+.ver-inline-menu li i,
+.ver-inline-menu li.active i,
+.ver-inline-menu li:hover i {
+    background: unset !important;
+}
+
+.ver-inline-menu li.active:after {
+    border-left-color: transparent;
+} */
+
+/* Form Input Money */
+
+input.form-control.money {
+    width: 118px !important;
+    border-radius: 10px !important;
+}
+
+input.form-control.quantity {
+    width: 118px !important;
+    border-radius: 10px !important;
+}
+
+/* =======================
+====== Mobile =======
+================ */
+
+@media (max-width: 620px) {
+    .portlet.box.blue-madison {
+        padding: 2em 1em !important;
+        border-radius: 20px !important;
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+        border: unset !important;
+    }
+}

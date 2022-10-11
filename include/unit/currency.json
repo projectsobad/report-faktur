@@ -1,0 +1,17 @@
+{	
+	"default":"IDR",
+	"unit":{
+		"IDR":
+		{
+			"label" : "Rupiah Indonesia",
+			"unit"	: "IDR",
+			"value"	: 1
+		},
+		"USD":
+		{
+			"label" : "Dollar Amerika",
+			"unit"	: "USD",
+			"value"	: 1
+		}
+	}
+}

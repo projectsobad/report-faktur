@@ -1,0 +1,167 @@
+.dropdown-menu>li>a,
+.user {
+    padding: 3px 11px;
+}
+
+/* Cekk bosssskuu */
+
+a.sasi_sidemenu>h4 {
+    text-transform: uppercase;
+}
+
+.sasi-nav-pills>li>a:hover,
+.sasi-nav-pills>li>a:focus {
+    text-decoration: none;
+    background-color: #c88fe7;
+    color: #fff;
+}
+
+.sasi-nav-pills>li>a {
+    border-radius: 42px;
+    color: #8023B4;
+}
+
+
+.sasi-nav-pills>li.active>a,
+.sasi-nav-pills>li.active>a:hover,
+.sasi-nav-pills>li.active>a:focus {
+    color: #fff;
+    background-color: #8023B4;
+
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #000000;
+    text-decoration: none;
+    background-color: #fff;
+    border: unset;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #8023b4;
+    border-color: #8023b4;
+    border-radius: 7px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 6px 14px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #F5F5F5;
+    background-image: none;
+    border: 1px solid #F5F5F5;
+    border-radius: 10px;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.dropdown-menu.dropdown-radiobuttons {
+    border-radius: 12px !important;
+    box-shadow: 0px 4px 17px -7px;
+}
+
+
+
+
+
+@media (max-width: 865px) {
+    .icon-user-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 10px 15px;
+        margin: 30px 0px 0px -191px;
+        font-size: 14px;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #fff;
+        border-radius: 9px;
+        -webkit-box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+        box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
+    }
+
+
+}
+
+@media (max-width: 620px) {
+
+    .topbar,
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: rgba(255, 255, 255, 0);
+    }
+
+    .topbar-content,
+    .navbar-toggle {
+        position: relative;
+        margin-top: -38px;
+        margin-bottom: 5%;
+        background-image: none;
+    }
+
+    .icon-user-menu {
+        margin: 0px 0px 0px 20px;
+    }
+
+    .navbar-header {
+        padding-bottom: 7px;
+    }
+
+    .btn-add {
+        margin-top: 15px;
+    }
+
+
+    .panel-body.p-lg {
+        padding: 0px;
+    }
+
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 0px;
+    }
+
+    a.btn.btn-blue.btn-add.radius-pills.btn-lg.active {
+        padding: 6px;
+    }
+
+    .container.sasi-menu {
+        margin-left: 0;
+    }
+
+    .btn-group>.dropdown-menu {
+        margin-top: 10px;
+        left: -114px;
+    }
+}

@@ -1,0 +1,143 @@
+{	
+	"default":"pcs",
+	"unit":{
+		"pcs":
+		{
+			"label" : "pieces",
+			"unit"	: "pcs",
+			"value"	: 1
+		},
+		"cup":
+		{
+			"label" : "cup",
+			"unit"	: "cup",
+			"value"	: 1
+		},
+		"sdm":
+		{
+			"label" : "Sendok Makan",
+			"unit"	: "sdm",
+			"value"	: 1
+		},
+		"sdt":
+		{
+			"label" : "Sendok Teh",
+			"unit"	: "sdt",
+			"value"	: 1
+		},			
+		"bungkus":
+		{
+			"label" : "bungkus",
+			"unit"	: "bungkus",
+			"value"	: 1
+		},
+		"potong":
+		{
+			"label" : "potong",
+			"unit"	: "potong",
+			"value"	: 1
+		},
+		"ekor":
+		{
+			"label" : "ekor",
+			"unit"	: "ekor",
+			"value"	: 1
+		},
+		"buah":
+		{
+			"label" : "buah",
+			"unit"	: "buah",
+			"value"	: 1
+		},
+		"lembar":
+		{
+			"label" : "lembar",
+			"unit"	: "lembar",
+			"value"	: 1
+		},
+		"lusin":
+		{
+			"label" : "lusin",
+			"unit"	: "lusin",
+			"value"	: 12
+		},
+		"gross":
+		{
+			"label" : "gross",
+			"unit"	: "gross",
+			"value"	: 144
+		},
+		"kodi":
+		{
+			"label" : "kodi",
+			"unit"	: "kodi",
+			"value"	: 20
+		},
+		"rim":
+		{
+			"label" : "rim",
+			"unit"	: "rim",
+			"value"	: 500
+		},
+		"pack":
+		{
+			"label" : "pack",
+			"unit"	: "pack",
+			"value"	: 1
+		},
+		"dus":
+		{
+			"label" : "dus",
+			"unit"	: "dus",
+			"value"	: 1
+		},
+		"derigen":
+		{
+			"label" : "derigen",
+			"unit"	: "derigen",
+			"value"	: 1
+		},
+		"renteng":
+		{
+			"label" : "renteng",
+			"unit"	: "renteng",
+			"value"	: 12
+		},
+		"porsi":
+		{
+			"label" : "porsi",
+			"unit"	: "porsi",
+			"value"	: 1
+		},
+		"orang":
+		{
+			"label" : "orang",
+			"unit"	: "orang",
+			"value"	: 1
+		},
+		"roll":
+		{
+			"label" : "roll",
+			"unit"	: "roll",
+			"value"	: 1
+		},
+		"set":
+		{
+			"label" : "set",
+			"unit"	: "set",
+			"value"	: 1
+		},
+		"kit":
+		{
+			"label" : "kit",
+			"unit"	: "kit",
+			"value"	: 1
+		},
+		"unit":
+		{
+			"label" : "unit",
+			"unit"	: "unit",
+			"value"	: 1
+		}
+	}
+}
