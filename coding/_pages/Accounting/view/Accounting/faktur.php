@@ -645,7 +645,7 @@ class faktur_accounting extends _page
 	{
 		$_SESSION[_prefix . 'development'] = 0;
 
-		$post = $_POST['type'];
+		$post = $_GET['type'];
 		$data = self::_filter_data();
 
 		$args = array(
