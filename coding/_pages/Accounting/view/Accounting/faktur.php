@@ -652,7 +652,7 @@ class faktur_accounting extends _page
 			'data'			=> $data,
 			'html'			=> '_html',
 			'object'		=> self::$object,
-			'title'			=> 'Faktur ' . $title . ' - ' . $data['date']
+			'title'			=> 'Faktur ' . $data['title'] . ' - ' . $data['date']
 		);
 
 		$args = pdf_setting_account_cashflow($args);
