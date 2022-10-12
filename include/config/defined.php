@@ -45,7 +45,7 @@ define('SITE', 'http');
 define('HOSTNAME', $_SERVER['SERVER_NAME']);
 
 // set name url
-define('URL', 'system-management');
+define('URL', 'report-faktur');
 
 
 // set check table
@@ -70,7 +70,7 @@ define('language', true);
 define('company', 'Solo Abadi System Information');
 
 // set judul Website
-define('title', 'System Management');
+define('title', 'Report Faktur');
 
 // set Auto Include Page
 define('include_pages', true);
