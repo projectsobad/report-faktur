@@ -74,42 +74,9 @@ class faktur_accounting extends _page
 				'type'	=> self::$type
 			);
 
-			$label = ''; $title = '-';
-
-			if($post=='invoice'){
-				$label = 'No Inv';
-				$title = invoice_marketing::_post_title($val['title'],$val['inserted']);
-				$value = self::_get_nominalInvoice($val['reff_reff'],$val['reff']);
-
-				$nominal = $value['nominal'];
-				$ppn = $value['ppn'];
-			}else if($post=='order'){
-				$label = 'No Order';
-				$title = transaksi_retail::_post_title($val['title'],$val['meta_note_type'],$val['inserted']);
-				$value = self::_get_nominalOrder($val['ID'],$val['_discount']);
-
-				$nominal = $value['nominal'];
-				$ppn = $value['ppn'];
-
-				if($ppn==0){
-					continue;
-				}
-
-				$val['_no_faktur'] = '-';
-			}else if($post=='purchase'){
-				if($val['var']=='purchase'){
-					$label = 'No PO';
-					$title = transaction_purchase::_post_title($val['title'],$val['inserted']);
-					$value = self::_get_nominalPurchase($val['ID']);
-				}else{
-					$label = 'No PO';
-					$title = transaction_purchase::_post_title($val['title_reff'],$val['inserted_reff']);
-					$value = self::_get_nominal_tagihan($val['ID']);
-				}
-
-				$nominal = $value['nominal'] + $value['ongkir'];
-				$ppn = $value['ppn'];
-			}
+			$conv = self::_conv_information($post,$val);
+			$nominal = $conv['nominal'];
+			$ppn = $conv['pajak'];
 
 			$tot_nominal += $nominal;
 			$tot_pajak += $ppn;
@@ -129,10 +96,10 @@ class faktur_accounting extends _page
 					format_date_id($val['post_date']),
 					true
 				),
-				$label		=> array(
+				$conv['label']	=> array(
 					'left',
 					'15%',
-					$title,
+					$conv['title'],
 					true
 				),
 				'Contact'	=> array(
@@ -144,7 +111,7 @@ class faktur_accounting extends _page
 				'Faktur'	=> array(
 					'left',
 					'12%',
-					$val['_no_faktur'],
+					$conv['faktur'],
 					true
 				),
 				'Nominal'	=> array(
@@ -316,6 +283,53 @@ class faktur_accounting extends _page
 		echo print_button($print);
 		echo print_button($excel);
 		return ob_get_clean();
+	}
+
+	public static function _conv_information($post = '', $val = array()){
+		$label = ''; $title = '-';
+
+		if($post=='invoice'){
+			$label = 'No Inv';
+			$title = invoice_marketing::_post_title($val['title'],$val['inserted']);
+			$value = self::_get_nominalInvoice($val['reff_reff'],$val['reff']);
+
+			$nominal = $value['nominal'];
+			$ppn = $value['ppn'];
+		}else if($post=='order'){
+			$label = 'No Order';
+			$title = transaksi_retail::_post_title($val['title'],$val['meta_note_type'],$val['inserted']);
+			$value = self::_get_nominalOrder($val['ID'],$val['_discount']);
+
+			$nominal = $value['nominal'];
+			$ppn = $value['ppn'];
+
+			if($ppn==0){
+				continue;
+			}
+
+			$val['_no_faktur'] = '-';
+		}else if($post=='purchase'){
+			if($val['var']=='purchase'){
+				$label = 'No PO';
+				$title = transaction_purchase::_post_title($val['title'],$val['inserted']);
+				$value = self::_get_nominalPurchase($val['ID']);
+			}else{
+				$label = 'No PO';
+				$title = transaction_purchase::_post_title($val['title_reff'],$val['inserted_reff']);
+				$value = self::_get_nominal_tagihan($val['ID']);
+			}
+
+			$nominal = $value['nominal'] + $value['ongkir'];
+			$ppn = $value['ppn'];
+		}
+
+		return array(
+			'label'		=> $label,
+			'title'		=> $title,
+			'nominal'	=> $nominal,
+			'pajak'		=> $ppn,
+			'faktur'	=> $val['_no_faktur']
+		);
 	}
 
 	public static function _get_nominalInvoice($id_quo=0, $id_project=0){
@@ -690,10 +704,32 @@ class faktur_accounting extends _page
 		$array = self::_array();
 		$object = self::$table;
 
+		$data = array();
+		$nominal = $pajak = 0;
+		foreach ($args as $key => $val) {
+			$conv = self::_conv_information($type,$val);
+			$label = $conv['label'];
+
+			$nominal += $conv['nominal'];
+			$pajak += $conv['pajak'];
+
+			$data = array(
+				'date'		=> format_date_id($val['post_date']),
+				'title'		=> $conv['title'],
+				'contact'	=> $val['name_comp'],
+				'faktur'	=> $conv['faktur'],
+				'nominal'	=> 'Rp. ' . format_nominal($conv['nominal']),
+				'pajak'		=> 'Rp. ' . format_nominal($conv['pajak'])
+			);
+		}
+
 		$data_header = array(
 			'title'			=> $title,
+			'label'			=> $label,
 			'date'			=> $args['date'],
-			'data'			=> $args
+			'data'			=> $args,
+			'tot_nominal'	=> 'Rp. ' . format_nominal($nominal),
+			'tot_pajak'		=> 'Rp. ' . format_nominal($pajak)
 		);
 
 		heading();
