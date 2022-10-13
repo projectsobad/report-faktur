@@ -78,6 +78,10 @@ class faktur_accounting extends _page
 			$nominal = $conv['nominal'];
 			$ppn = $conv['pajak'];
 
+			if($post=='order' && $ppn<=0){
+				continue;
+			}
+
 			$tot_nominal += $nominal;
 			$tot_pajak += $ppn;
 
@@ -704,6 +708,10 @@ class faktur_accounting extends _page
 		foreach ($args as $key => $val) {
 			$conv = self::_conv_information($type,$val);
 			$label = $conv['label'];
+
+			if($post=='order' && $conv['pajak'] <= 0){
+				continue;
+			}
 
 			$nominal += $conv['nominal'];
 			$pajak += $conv['pajak'];
