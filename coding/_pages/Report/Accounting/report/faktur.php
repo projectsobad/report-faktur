@@ -1,24 +1,34 @@
-<?php
-var_dump($data[0]);
 
-$all =[
-		['1','20 Mei 2022','0066/INV/SAI/05/22','0','Rp.0','Rp.0'],
-		['2','25 Mei 2022','0048/INV/SAI/05/22','PT. GUDANG GARAM Tbk','Rp.52.802.750','Rp.5.808.303'],
-		['3','18 Mei 2022','0051/INV/SAI/05/22','Universitas Muhammadiyah Gombong - Prodi. Teknik Industri','Rp.29.830.000','Rp.3.281.300'],
-		['4','10 Mei 2022','0056/INV/SAI/05/22','Rp.1.250.000','Rp.137.500'],
-		['5','12 Mei 2022','0057/INV/SAI/05/22','Axiom Space - Aerospace','Rp.6.175.000','Rp.679.250']
-	];
-?>
 
-<h1>DAFTAR INVOICE</h1>
+<style>
+	table, th, td {
 
-<?php foreach($data as $als) : ?>
-<ul>	
-	<li><?= $als["name_comp"];  ?></li>
-	<li><?= $als["phone_no_comp"];  ?></li>
-	<li><?= $als["title_reff"];  ?></li>
-	<li><?= $als["company_reff"];  ?></li>
-	<li><?php echo $als["inserted_reff"];  ?></li>
-</ul>
-<?php endforeach; ?>
-
+		border: 1px solid black
+		border-style: solid;
+		}
+</style>
+<table border="1" cellspacing="0" cellpadding="5" style="width :100%;">
+ 	<tr>
+ 		<th>Tanggal</th>
+ 		<th>No Inv</th>
+ 		<th>Contact</th>
+ 		<th>No Faktur</th>
+ 		<th>Nominal</th>
+ 		<th>Pajak</th>
+ 	</tr>
+<?php foreach($data as $als => $val) {?>
+ 	<tr>
+ 		<td><?= $val["date"];  ?></td>
+		<td><?= $val["title"];  ?></td>
+		<td><?= $val["contact"];  ?>></td>
+		<td><?= $val["faktur"];  ?></td>
+		<td><?= $val["nominal"];  ?></td>
+		<td><?= $val["pajak"];  ?></td>
+ 	</tr>
+<?php }?>
+	<tr>
+		<td colspan="4"><center>Total</center></td>
+		<td>Rp.165.699.403</td>
+		<td>Rp.18.226.935</td>
+	</tr>
+</table>

@@ -709,7 +709,7 @@ class faktur_accounting extends _page
 			$conv = self::_conv_information($type,$val);
 			$label = $conv['label'];
 
-			if($post=='order' && $conv['pajak'] <= 0){
+			if($type=='order' && $conv['pajak'] <= 0){
 				continue;
 			}
 
