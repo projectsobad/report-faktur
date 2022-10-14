@@ -20,13 +20,13 @@ $i = 1;
  	</tr>
 <?php foreach($data as $als => $val) {?>
  	<tr>
- 		<td><?= $i++; ?></td>
- 		<td><?= $val["date"];  ?></td>
-		<td><?= $val["title"];  ?></td>
-		<td><?= $val["contact"];  ?></td>
-		<td><?= $val["faktur"];  ?></td>
-		<td><?= $val["nominal"];  ?></td>
-		<td><?= $val["pajak"];  ?></td>
+ 		<td style="width: 5%;"><?= $i++; ?></td>
+ 		<td style="width: 12%;"><?= $val["date"];  ?></td>
+		<td style="width: 15%;"><?= $val["title"];  ?></td>
+		<td style="width: 66%;"><?= $val["contact"];  ?></td>
+		<td style="width: 12%;"><?= $val["faktur"];  ?></td>
+		<td style="width: 15%;"><?= $val["nominal"];  ?></td>
+		<td style="width: 12%;"><?= $val["pajak"];  ?></td>
  	</tr>
 <?php }?>
 	<tr>
